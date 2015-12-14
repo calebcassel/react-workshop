@@ -1,0 +1,86 @@
+$background: #eee;
+$color: #eee;
+$tutorialBg: #333340;
+
+html, body {
+  background: $background;
+  height: 100%;
+}
+
+.flex-wrapper {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.app {
+  flex-grow: 4;
+  padding: 2rem;
+}
+
+.tutorial {
+  flex-basis: 20rem;
+  flex-grow: 3;
+  background: $tutorialBg;
+  color: $color;
+  padding: 2rem;
+  overflow-y: scroll;
+
+  a {
+    border-bottom: 1px dotted $color;
+    color: $color;
+    cursor: pointer;
+    text-decoration: none;
+  }
+}
+
+/* Accordion styles */
+.react-sanfona {
+  width: 100%;
+}
+
+.react-sanfona-item {
+  margin-bottom: 1rem;
+
+  h4 {
+    margin: 0 0 0.5rem 0;
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  .react-sanfona-item-body-wrapper {
+    background: #3e3e4e;
+    margin-top: 0.25rem;
+    padding: 1rem;
+  }
+
+  .react-sanfona-item-title {
+    font-size: 14pt;
+  }
+
+  &.react-sanfona-item-expanded .react-sanfona-item-title {
+    font-weight: bold;
+  }
+}
+
+@-webkit-keyframes blink {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    50.01% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+.blink {
+  -webkit-animation: blink 0.7s infinite linear alternate;
+  -webkit-font-smoothing: antialiased;
+}

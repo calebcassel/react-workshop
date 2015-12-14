@@ -1,0 +1,34 @@
+{
+  "name": "react-workshop",
+  "version": "1.0.0",
+  "description": "Lessons for learning React",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Caleb Cassel",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3",
+    "react-sanfona": "^0.0.8"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.17",
+    "babel-loader": "^6.2.0",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "css-loader": "^0.23.0",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^2.0.0",
+    "eslint-plugin-react": "^3.11.3",
+    "node-sass": "^3.4.2",
+    "react-hot-loader": "^1.3.0",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0",
+    "webpack-stream": "^3.0.1"
+  }
+}
