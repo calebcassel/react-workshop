@@ -30,7 +30,7 @@ class Part4 extends React.Component {
         <p>
           Finally, we need to change how we're rendering each square. We need to pass in the
           current selection and assign a click handler. Rather than listing
-          each square individually <code>render()</code>, this could be more easily
+          each square individually in <code>render()</code>, this could be more easily
           accomplished by aggregating over the array in our state.
         </p>
         <Highlight type="javascript">
