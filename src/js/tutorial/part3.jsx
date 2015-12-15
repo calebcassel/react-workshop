@@ -53,10 +53,10 @@ class Part3 extends React.Component {
 
         <h3>PropTypes</h3>
         <p>
-          It's good practice to add validation to props that a component will receive.
+          It's good practice to add validation of properties that a component will receive.
           This helps ensure reusability when sharing components, and forces you to think
-          through about how you want others to interact with your component.
-          Beneath your Square class, add this definition for validating the new properties we'll accept:
+          about how you want others to interact with your component.
+          To do this, add a <code>propTypes</code> definition beneath your Square class:
         </p>
         <Highlight type="javascript">
 {`Square.propTypes = {

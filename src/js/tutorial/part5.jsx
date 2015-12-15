@@ -44,7 +44,7 @@ const Part5 = () => {
 }`}
       </Hint>
 
-      <h3>Finish It</h3>
+      <h3>Other Possibilities</h3>
       <p>
         At this point, see what more you can add on your own!
         <ul>
@@ -52,6 +52,7 @@ const Part5 = () => {
           <li>Play an animation for the winner</li>
           <li>Reset the game board</li>
           <li>Let the first player choose between X or O</li>
+          <li>Add a countdown timer for each turn</li>
         </ul>
       </p>
     </div>
