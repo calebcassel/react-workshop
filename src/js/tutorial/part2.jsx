@@ -25,17 +25,12 @@ class Part2 extends React.Component {
 
   export default Square;`}
         </Hint>
-        <p></p>
         <p>
           Now update the component produce this markup:
         </p>
         <Highlight className="html">
           {'<div class="square"></div>'}
         </Highlight>
-        <p>
-          We want to show this square on the page, so go back and update <code>app.jsx</code> to
-          return just our new <code>Square</code> component.
-        </p>
         <Hint type="javascript">
 {`import React from 'react';
 
@@ -48,6 +43,26 @@ class Square extends React.Component {
 }
 
 export default Square;`}
+        </Hint>
+        <p></p>
+        <p>
+          We want to show this square on the page, so go back and update <code>app.jsx</code> to
+          return just our new <code>Square</code> component.
+        </p>
+        <Hint type="javascript">
+{`import React from 'react';
+import Square from './square';
+
+class App extends React.Component {
+  render() {
+    return (
+      <Square/>
+    );
+  }
+}
+
+export default App;
+`}
         </Hint>
         <p></p>
         <h3>Event Handlers</h3>

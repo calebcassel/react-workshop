@@ -93,6 +93,7 @@ class Part3 extends React.Component {
   }
 
   Square.propTypes = {
+    onClick: React.PropTypes.func,
     selection: React.PropTypes.string,
   };
 
