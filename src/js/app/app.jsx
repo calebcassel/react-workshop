@@ -1,11 +1,12 @@
 import React from 'react';
+import Square from './square';
 
-class WorkshopApp extends React.Component {
+class App extends React.Component {
   render() {
     return (
-      <h1 className="blink">Hello world!</h1>
+      <Square/>
     );
   }
 }
 
-export default WorkshopApp;
+export default App;

@@ -16,6 +16,13 @@ html, body {
 .app {
   flex-grow: 4;
   padding: 2rem;
+
+  .square {
+    background: white;
+    border: 2px solid gray;
+    height: 10rem;
+    width: 10rem;
+  }
 }
 
 .tutorial {
@@ -26,11 +33,39 @@ html, body {
   padding: 2rem;
   overflow-y: scroll;
 
+  .btn.next-section {
+    margin-top: 2rem;
+    float: right;
+  }
+
+  header {
+    clear: both;
+    margin-top: 1rem;
+  }
+
   a {
     border-bottom: 1px dotted $color;
     color: $color;
     cursor: pointer;
     text-decoration: none;
+
+    &.hint {
+      font-size: 110%;
+    }
+  }
+
+  p code, ul code {
+    background: #3e3e4e;
+    color: white;
+  }
+
+  pre {
+    border: 0;
+    background: none;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
 }
 

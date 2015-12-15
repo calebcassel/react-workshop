@@ -9,9 +9,10 @@
   "author": "Caleb Cassel",
   "license": "MIT",
   "dependencies": {
+    "highlight.js": "^8.9.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
-    "react-sanfona": "^0.0.8"
+    "react-highlight": "^0.6.1"
   },
   "devDependencies": {
     "babel-core": "^6.3.17",

@@ -1,4 +1,5 @@
 import React from 'react';
+import Highlight from 'react-highlight';
 
 class Hint extends React.Component {
   constructor() {
@@ -13,18 +14,23 @@ class Hint extends React.Component {
   render() {
     if (this.state.showing) {
       return (
-        <div>
+        <Highlight className={this.props.type}>
           {this.props.children}
-        </div>
+        </Highlight>
       );
     }
 
     return (
         <div>
-          <a onClick={this.showHint.bind(this)}>Show hint.</a>
+          <a className="hint" onClick={this.showHint.bind(this)}>Show hint.</a>
         </div>
     );
   }
 }
+
+Hint.propTypes = {
+  children: React.PropTypes.any,
+  type: React.PropTypes.string.isRequired,
+};
 
 export default Hint;
