@@ -95,7 +95,7 @@ class Square extends React.Component {
     } else if (selection === 'x') {
       newSelection = 'o';
     } else {
-      newSelection = 'empty';
+      newSelection = 'none';
     }
 
     this.setState({
