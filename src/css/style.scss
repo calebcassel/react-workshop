@@ -14,20 +14,44 @@ html, body {
 }
 
 .app {
-  flex-grow: 4;
+  flex-grow: 1;
   padding: 2rem;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .game-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 44rem;
+    width: 44rem;
+  }
 
   .square {
     background: white;
     border: 2px solid gray;
-    height: 10rem;
-    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 14rem;
+    width: 14rem;
+    margin: 0 3px;
+
+    & > img {
+      max-height: 100%;
+      max-width: 100%;
+    }
   }
 }
 
 .tutorial {
-  flex-basis: 20rem;
-  flex-grow: 3;
+  flex-basis: 40rem;
+  flex-grow: 1;
+  font-size: 16px;
   background: $tutorialBg;
   color: $color;
   padding: 2rem;
@@ -50,6 +74,7 @@ html, body {
     text-decoration: none;
 
     &.hint {
+      cursor: help;
       font-size: 110%;
     }
   }
@@ -67,36 +92,9 @@ html, body {
   h1, h2, h3, h4 {
     font-family: Georgia, "Times New Roman", Times, serif;
   }
-}
 
-/* Accordion styles */
-.react-sanfona {
-  width: 100%;
-}
-
-.react-sanfona-item {
-  margin-bottom: 1rem;
-
-  h4 {
-    margin: 0 0 0.5rem 0;
-  }
-
-  section {
-    margin-bottom: 2rem;
-  }
-
-  .react-sanfona-item-body-wrapper {
-    background: #3e3e4e;
-    margin-top: 0.25rem;
-    padding: 1rem;
-  }
-
-  .react-sanfona-item-title {
-    font-size: 14pt;
-  }
-
-  &.react-sanfona-item-expanded .react-sanfona-item-title {
-    font-weight: bold;
+  h3, h4 {
+    margin: 2rem 0 0.5rem 0;
   }
 }
 

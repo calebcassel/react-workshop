@@ -1,5 +1,6 @@
 import React from 'react';
 import Hint from './hint';
+import Highlight from 'react-highlight';
 
 class Part1 extends React.Component {
   render() {
@@ -36,11 +37,9 @@ class Part1 extends React.Component {
             Let's start by modifying this component's output.
             Change the render method of app.jsx to return:
           </p>
-          <p>
-            <code>
+          <Highlight type="html">
               {'<h1>Hello world!</h1>'}
-            </code>
-          </p>
+          </Highlight>
           <p>You should see your changes reflected on the left side of this window.</p>
         </section>
 

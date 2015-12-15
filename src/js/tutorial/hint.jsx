@@ -22,7 +22,7 @@ class Hint extends React.Component {
 
     return (
         <div>
-          <a className="hint" onClick={this.showHint.bind(this)}>Show hint.</a>
+          <a className="hint" onClick={this.showHint.bind(this)}>Hint</a>
         </div>
     );
   }

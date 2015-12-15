@@ -1,8 +1,17 @@
 import React from 'react';
 import Part1 from './part1';
 import Part2 from './part2';
+import Part3 from './part3';
+import Part4 from './part4';
+import Part5 from './part5';
 
-const sections = 2;
+const sections = [
+  <Part1/>,
+  <Part2/>,
+  <Part3/>,
+  <Part4/>,
+  <Part5/>,
+];
 
 class Tutorial extends React.Component {
   constructor() {
@@ -10,20 +19,11 @@ class Tutorial extends React.Component {
     this.state = { section: 1 };
   }
 
-  getSection() {
-    switch (this.state.section) {
-      case 1:
-        return <Part1/>;
-      case 2:
-        return <Part2/>;
-      default:
-        return null;
-    }
-  }
-
   nextSection() {
-    if (this.state.section < sections) {
-      this.setState({ section: this.state.section + 1 });
+    if (this.state.section < sections.length) {
+      this.setState({ section: this.state.section + 1 }, () => {
+        this.refs.tutorial.scrollTop = 0;
+      });
     }
   }
 
@@ -37,7 +37,7 @@ class Tutorial extends React.Component {
     const leftArrow = String.fromCharCode(171);
     const rightArrow = String.fromCharCode(187);
     const canGoBack = this.state.section > 1;
-    const canAdvance = this.state.section < sections;
+    const canAdvance = this.state.section < sections.length;
 
     const prevButton = canGoBack ? (
       <button className="btn btn-default btn-sm" onClick={this.prevSection.bind(this)}>
@@ -52,14 +52,14 @@ class Tutorial extends React.Component {
     ) : null;
 
     return (
-      <div>
+      <div ref="tutorial">
         <div>
           {prevButton}
         </div>
         <header>
           <h1>Part {this.state.section}</h1>
         </header>
-        {this.getSection()}
+        {sections[this.state.section - 1]}
         {nextButton}
       </div>
     );
